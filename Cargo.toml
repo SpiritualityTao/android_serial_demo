@@ -1,0 +1,10 @@
+[package]
+name = "android_serial_demo"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+# 串口读写核心依赖，指定稳定版本
+serialport = "4.8.1"
+# 可选：添加错误处理优化依赖
+anyhow = "1.0"
