@@ -1,0 +1,37 @@
+# android_serial_demo
+
+Minimal demo showing serial communication on Android (USB-serial adapters and device node access). Includes example code to open/close ports, send/receive data, and basic UI for testing.
+
+## 特性
+- USB 串口（FTDI、CP210x、CH34x），通过 usb-serial-for-android
+- 直接访问设备节点（/dev/ttyS*、/dev/ttyUSB*），适用于已 root 的设备或平台构建
+- 可配置的波特率、数据位、校验位、停止位
+- 简单的发送/接收界面和日志视图
+
+## 先决条件
+- Android Studio（推荐）或 Gradle
+- Android SDK
+- 可选：usb-serial-for-android 依赖（Gradle）或在使用设备节点时的本地 JNI 串口库
+
+## 构建与运行
+1. 在 Android Studio 中打开项目。
+2. 让 Gradle 同步并下载依赖项。
+3. 连接 Android 设备（启用 USB 调试）。
+4. 在设备上运行应用。
+
+## 使用方法
+- 当提示时授予 USB 权限（用于 USB 串口适配器）。
+- 在应用 UI 中选择设备或设备节点。
+- 配置串口参数（波特率、校验、数据位、停止位）。
+- 点击 连接，然后通过输入框发送/接收数据，并查看日志。
+
+## 故障排除
+- 确保主机上安装了正确的 USB 驱动（如果通过 ADB 转发使用适配器）。
+- 对于设备节点，确保有适当的权限或在已 root 的设备/平台构建上运行以获得访问权限。
+- 检查 logcat 以获取错误和堆栈跟踪。
+
+## 贡献
+欢迎 PR 和 issue。请保持修改小且有文档说明。
+
+## 许可证
+请指定项目的许可证（例如 MIT）。
