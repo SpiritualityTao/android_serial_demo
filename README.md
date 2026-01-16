@@ -85,3 +85,15 @@ cargo run --example shared_state
 cargo run --example scoped_threads
 cargo run --example async_tcp
 ```
+
+异步多客户端服务器与压测客户端：
+
+- `async_multi_server` - 基于 `tokio` 的并发 TCP 服务器（端口 127.0.0.1:6000），接受多个客户端并回显收到的数据。
+- `stress_client` - 压力测试客户端，启动大量异步客户端并发送消息用于负载测试。
+
+运行：
+
+```bash
+cargo run --example async_multi_server
+cargo run --example stress_client
+```

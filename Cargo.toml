@@ -13,8 +13,9 @@ anyhow = "1.0"
 # 为异步示例添加 tokio（可选）
 tokio = { version = "1", features = ["full"] }
 
+# 并发/异步示例依赖
+crossbeam-channel = "0.5"
+futures = "0.3"
+
 [build-dependencies]
 cc = "1.0"
-
-[dependencies.crossbeam-channel]
-version = "0.5"
