@@ -69,3 +69,17 @@ cargo run --example tcp_echo
 ```
 
 说明：`tcp_echo` 绑定到本机端口 `127.0.0.1:4000`，仅用于本机学习测试。
+
+进阶示例（位于 `examples/`）：
+
+- `shared_state` - 使用 `Arc<Mutex<T>>` 在多个线程间共享并修改状态的示例。
+- `scoped_threads` - 演示 `thread::scope`，展示如何安全地把栈上数据借用到线程中（线程在 scope 返回前结束）。
+- `async_tcp` - 基于 `tokio` 的异步 TCP echo 示例（绑定 `127.0.0.1:5000`）。
+
+运行进阶示例：
+
+```bash
+cargo run --example shared_state
+cargo run --example scoped_threads
+cargo run --example async_tcp
+```

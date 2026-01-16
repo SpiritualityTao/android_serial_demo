@@ -8,3 +8,6 @@ edition = "2024"
 serialport = "4.8.1"
 # 可选：添加错误处理优化依赖
 anyhow = "1.0"
+
+# 为异步示例添加 tokio（可选）
+tokio = { version = "1", features = ["full"] }
