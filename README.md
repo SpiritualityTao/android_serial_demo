@@ -35,3 +35,37 @@ Minimal demo showing serial communication on Android (USB-serial adapters and de
 
 ## 许可证
 请指定项目的许可证（例如 MIT）。
+
+## Rust 语法学习示例
+
+本仓库包含一个轻量的学习示例，演示 Rust 常见语法与概念（变量、所有权、借用、结构体、枚举、Trait、泛型、闭包、迭代器、错误处理等）。
+
+运行示例：
+
+```bash
+cargo run --example learning_demo
+```
+
+示例不会触碰串口硬件，仅用于学习语言语法。如果想恢复原来的串口演示，请运行主二进制：
+
+```bash
+cargo run --bin android_serial_demo
+```
+
+更多示例（位于 `examples/`）:
+
+- `learning_demo` - 综合语法示例（已添加）。
+- `file_io` - 文件读写与复制示例。
+- `threading` - 线程与 `mpsc` 通道示例。
+- `tcp_echo` - 简单 TCP Echo（本地监听与客户端示例）。
+
+运行所有 examples 的快速方式：
+
+```bash
+cargo run --example learning_demo
+cargo run --example file_io
+cargo run --example threading
+cargo run --example tcp_echo
+```
+
+说明：`tcp_echo` 绑定到本机端口 `127.0.0.1:4000`，仅用于本机学习测试。
