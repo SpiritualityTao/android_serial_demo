@@ -17,10 +17,6 @@ Minimal demo showing serial communication on Android (USB-serial adapters and de
 1. 在 Android Studio 中打开项目。
 2. 让 Gradle 同步并下载依赖项。
 3. 连接 Android 设备（启用 USB 调试）。
-4. 在设备上运行应用。
-
-## 使用方法
-- 当提示时授予 USB 权限（用于 USB 串口适配器）。
 - 在应用 UI 中选择设备或设备节点。
 - 配置串口参数（波特率、校验、数据位、停止位）。
 - 点击 连接，然后通过输入框发送/接收数据，并查看日志。
@@ -30,11 +26,17 @@ Minimal demo showing serial communication on Android (USB-serial adapters and de
 - 对于设备节点，确保有适当的权限或在已 root 的设备/平台构建上运行以获得访问权限。
 - 检查 logcat 以获取错误和堆栈跟踪。
 
+
+- `thread_pool` - 简单线程池实现：提交任务并在析构时优雅关闭工作线程。
+
+运行线程池示例：
+
+```bash
+cargo run --example thread_pool
+```
+
 ## 贡献
 欢迎 PR 和 issue。请保持修改小且有文档说明。
-
-## 许可证
-请指定项目的许可证（例如 MIT）。
 
 ## Rust 语法学习示例
 
